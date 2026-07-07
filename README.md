@@ -9,6 +9,10 @@ Kelompok 18
 
 https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success
 
+# Link Paper Drive
+
+https://drive.google.com/drive/folders/1162IigPAGehMYj87sE4OAyQnsWeYBPVI
+
 # Prediksi Mahasiswa Dropout Menggunakan Algoritma Boosting dengan Interpretabilitas SHAP
 
 Repositori ini berisi kode sumber dan hasil eksperimen untuk memprediksi risiko *dropout* (putus kuliah) serta keberhasilan akademik mahasiswa. Studi ini mengimplementasikan dan membandingkan tiga algoritma *tree-based boosting* mutakhir: **XGBoost**, **LightGBM**, dan **CatBoost**, yang diintegrasikan dengan **SHAP (SHapley Additive exPlanations)** untuk aspek interpretabilitas model.
