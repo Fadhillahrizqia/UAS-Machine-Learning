@@ -54,5 +54,3 @@ Berdasarkan grafik SHAP Summary Plot (Beeswarm), fitur-fitur paling kritis yang 
 ---
 
 
-├── README.md              # Dokumentasi proyek
-└── requirements.txt       # Daftar dependensi pustaka Python
