@@ -2,8 +2,8 @@
 Kelompok 18
 
 * Fadhillah Rizqia Arfin (1237050056)
-* Muhammad Jalallullail
-* Raditya Raihan
+* Muhammad Jalallullail (1237050025)
+* Raditya Raihan (1237050086)
 
 # Link Dataset
 
