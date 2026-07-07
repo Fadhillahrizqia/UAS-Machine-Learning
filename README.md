@@ -5,58 +5,56 @@ Fadhillah Rizqia Arfin
 Muhammad Jalallullail
 Raditya Raihan
 
-Komparasi Algoritma Boosting (XGBoost, LightGBM, CatBoost) untuk Prediksi Dropout Mahasiswa dengan Interpretabilitas SHAP
+# Prediksi Mahasiswa Dropout Menggunakan Algoritma Boosting dengan Interpretabilitas SHAP
 
-# Student Dropout Prediction using Boosting Algorithms with SHAP Interpretability
-
-This repository contains the source code and experimental results for predicting student dropout and academic success. The study implements and compares three state-of-the-art tree-based boosting algorithms: **XGBoost**, **LightGBM**, and **CatBoost**, integrated with **SHAP (SHapley Additive exPlanations)** for model interpretability.
+Repositori ini berisi kode sumber dan hasil eksperimen untuk memprediksi risiko *dropout* (putus kuliah) serta keberhasilan akademik mahasiswa. Studi ini mengimplementasikan dan membandingkan tiga algoritma *tree-based boosting* mutakhir: **XGBoost**, **LightGBM**, dan **CatBoost**, yang diintegrasikan dengan **SHAP (SHapley Additive exPlanations)** untuk aspek interpretabilitas model.
 
 ---
 
-## 🚀 Experimental Results & Model Evaluation
+## 🚀 Hasil Eksperimen & Evaluasi Model
 
-The models were evaluated using **10-fold Cross-Validation** on the *Predict Students Dropout and Academic Success* dataset from the UCI Machine Learning Repository. Below is the summary of the performance metrics achieved by each model:
+Seluruh model dievaluasi menggunakan metode **10-fold Cross-Validation** pada dataset *Predict Students Dropout and Academic Success* dari UCI Machine Learning Repository. Berikut adalah ringkasan metrik performa yang dicapai oleh masing-masing model:
 
-| Model | Accuracy (%) | Precision (%) | Recall (%) | F1-Score (%) | ROC-AUC |
+| Model | Akurasi (%) | Presisi (%) | Recall (%) | F1-Score (%) | ROC-AUC |
 | :--- | :---: | :---: | :---: | :---: | :---: |
 | **LightGBM** | **88.47%** | 85.04% | 78.13% | **81.45%** | 0.9315 |
 | **XGBoost** | 88.10% | 83.92% | **78.55%** | 81.15% | **0.9328** |
 | **CatBoost** | 87.90% | **85.34%** | 78.12% | 81.08% | 0.9310 |
 
-### Key Takeaways:
-* **LightGBM** achieved the highest overall **Accuracy (88.47%)** and **F1-Score (81.45%)**, making it highly reliable for balanced prediction.
-* **XGBoost** demonstrated the best discriminative capacity with the highest **ROC-AUC of 0.9328**.
-* **CatBoost** showed competitive performance, yielding the highest **Precision** score.
+### Poin Penting:
+* **LightGBM** berhasil mencetak nilai **Akurasi (88.47%)** dan **F1-Score (81.45%)** tertinggi secara keseluruhan, menjadikannya model yang sangat andal untuk prediksi yang seimbang.
+* **XGBoost** menunjukkan kemampuan diskriminasi kelas terbaik dengan perolehan skor **ROC-AUC tertinggi sebesar 0.9328**.
+* **CatBoost** memberikan performa yang sangat kompetitif dengan perolehan skor **Presisi** tertinggi di antara ketiganya.
 
 ---
 
-## 🔍 Model Interpretability via SHAP
+## 🔍 Interpretabilitas Model Melalui SHAP
 
-To avoid the "black-box" nature of machine learning models, we utilized **SHAP global and local explanations** to uncover the main driving factors behind student dropouts. 
+Untuk menghindari sifat model *machine learning* yang seperti "kotak hitam" (*black-box*), kami menggunakan **SHAP global dan local explanations** guna membongkar faktor-faktor utama yang mendorong keputusan model terhadap risiko mahasiswa *dropout*.
 
-### Global Feature Importance
-Based on the SHAP Summary Plot (Beeswarm), the most critical features influencing the model's predictions are:
-1. **Curricular units 2nd sem (approved):** The number of approved courses in the second semester is the strongest predictor. Lower approved units drastically increase the risk of dropout.
-2. **Tuition fees up to date:** Financial stability plays a vital role. Students with unpaid tuition fees are significantly more likely to drop out.
-3. **Curricular units 1st sem (approved):** Similar to the second semester, early academic performance in the first semester heavily determines retention.
-
----
-
-## 🛠️ Tech Stack & Methodology
-
-- **Language:** Python 3.x
-- **Libraries Used:** `xgboost`, `lightgbm`, `catboost`, `shap`, `scikit-learn`, `pandas`, `numpy`, `matplotlib`
-- **Validation Strategy:** 10-Fold Cross-Validation to prevent overfitting and ensure generalization.
-- **Handling Imbalance:** SMOTE (Synthetic Minority Over-sampling Technique) was implemented to handle class imbalance in student outcomes.
+### Fitur Paling Berpengaruh (Global Feature Importance)
+Berdasarkan grafik SHAP Summary Plot (Beeswarm), fitur-fitur paling kritis yang memengaruhi prediksi model adalah:
+1. **Curricular units 2nd sem (approved):** Jumlah mata kuliah yang lulus di semester 2 merupakan prediktor terkuat. Semakin sedikit jumlah mata kuliah yang lulus, semakin besar risiko mahasiswa mengalami *dropout*.
+2. **Tuition fees up to date:** Stabilitas finansial memainkan peran yang sangat vital. Mahasiswa dengan status pembayaran kuliah yang tidak lancar (tertunggak) secara signifikan lebih rentan untuk *dropout*.
+3. **Curricular units 1st sem (approved):** Mirip dengan semester dua, performa akademik awal di semester 1 sangat menentukan bertahannya seorang mahasiswa di perguruan tinggi.
 
 ---
 
-## 📂 Repository Structure
+## 🛠️ Stack Teknologi & Metodologi
+
+- **Bahasa Pemrograman:** Python 3.x
+- **Pustaka (Libraries):** `xgboost`, `lightgbm`, `catboost`, `shap`, `scikit-learn`, `pandas`, `numpy`, `matplotlib`
+- **Strategi Validasi:** 10-Fold Cross-Validation untuk mencegah *overfitting* dan memastikan kemampuan generalisasi model.
+- **Penanganan Data Tidak Seimbang:** SMOTE (Synthetic Minority Over-sampling Technique) diimplementasikan untuk menangani ketidakseimbangan kelas pada data kelulusan mahasiswa.
+
+---
+
+## 📂 Struktur Repositori
 
 ```text
-├── data/                  # Dataset directory
-├── notebooks/             # Jupyter Notebooks containing data exploration & modeling
-│   └── student_dropout_analysis.ipynb
-├── src/                   # Python source scripts
-├── README.md              # Project documentation
-└── requirements.txt       # Project dependencies
+├── data/                  # Direktori untuk file dataset
+├── notebooks/             # Jupyter Notebook untuk eksplorasi data & pemodelan
+│   └── analisis_dropout_mahasiswa.ipynb
+├── src/                   # Skrip Python utama
+├── README.md              # Dokumentasi proyek
+└── requirements.txt       # Daftar dependensi pustaka Python
