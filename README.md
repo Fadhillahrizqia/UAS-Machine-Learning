@@ -5,13 +5,17 @@ Fadhillah Rizqia Arfin
 Muhammad Jalallullail
 Raditya Raihan
 
+# Link Dataset
+
+https://archive.ics.uci.edu/dataset/697/predict+students+dropout+and+academic+success
+
 # Prediksi Mahasiswa Dropout Menggunakan Algoritma Boosting dengan Interpretabilitas SHAP
 
 Repositori ini berisi kode sumber dan hasil eksperimen untuk memprediksi risiko *dropout* (putus kuliah) serta keberhasilan akademik mahasiswa. Studi ini mengimplementasikan dan membandingkan tiga algoritma *tree-based boosting* mutakhir: **XGBoost**, **LightGBM**, dan **CatBoost**, yang diintegrasikan dengan **SHAP (SHapley Additive exPlanations)** untuk aspek interpretabilitas model.
 
 ---
 
-## 🚀 Hasil Eksperimen & Evaluasi Model
+##  Hasil Eksperimen & Evaluasi Model
 
 Seluruh model dievaluasi menggunakan metode **10-fold Cross-Validation** pada dataset *Predict Students Dropout and Academic Success* dari UCI Machine Learning Repository. Berikut adalah ringkasan metrik performa yang dicapai oleh masing-masing model:
 
@@ -28,7 +32,7 @@ Seluruh model dievaluasi menggunakan metode **10-fold Cross-Validation** pada da
 
 ---
 
-## 🔍 Interpretabilitas Model Melalui SHAP
+##  Interpretabilitas Model Melalui SHAP
 
 Untuk menghindari sifat model *machine learning* yang seperti "kotak hitam" (*black-box*), kami menggunakan **SHAP global dan local explanations** guna membongkar faktor-faktor utama yang mendorong keputusan model terhadap risiko mahasiswa *dropout*.
 
@@ -40,7 +44,7 @@ Berdasarkan grafik SHAP Summary Plot (Beeswarm), fitur-fitur paling kritis yang 
 
 ---
 
-## 🛠️ Stack Teknologi & Metodologi
+##  Stack Teknologi & Metodologi
 
 - **Bahasa Pemrograman:** Python 3.x
 - **Pustaka (Libraries):** `xgboost`, `lightgbm`, `catboost`, `shap`, `scikit-learn`, `pandas`, `numpy`, `matplotlib`
@@ -49,12 +53,6 @@ Berdasarkan grafik SHAP Summary Plot (Beeswarm), fitur-fitur paling kritis yang 
 
 ---
 
-## 📂 Struktur Repositori
 
-```text
-├── data/                  # Direktori untuk file dataset
-├── notebooks/             # Jupyter Notebook untuk eksplorasi data & pemodelan
-│   └── analisis_dropout_mahasiswa.ipynb
-├── src/                   # Skrip Python utama
 ├── README.md              # Dokumentasi proyek
 └── requirements.txt       # Daftar dependensi pustaka Python
