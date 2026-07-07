@@ -1,9 +1,9 @@
 # UAS-Machine-Learning
 Kelompok 18
 
-Fadhillah Rizqia Arfin
-Muhammad Jalallullail
-Raditya Raihan
+* Fadhillah Rizqia Arfin (1237050056)
+* Muhammad Jalallullail
+* Raditya Raihan
 
 # Link Dataset
 
